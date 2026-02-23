@@ -10,3 +10,12 @@ void activate_stop_light(void) {
         elevio_stopLamp(0);
     }
 }
+
+void open_door_when_stop(int floor){
+    if ((floor != -1) && (elevio_stopButton() == 1)) {
+        elevio_doorOpenLamp(1);
+        
+    } else {
+        elevio_doorOpenLamp(0);
+    }
+}
