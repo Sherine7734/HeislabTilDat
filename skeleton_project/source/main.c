@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <time.h>
-#include "driver/elevio.h"
+//#include "driver/elevio.h"
+#include "driver/floor_light.h"
 
 
 
@@ -16,6 +17,7 @@ int main(){
 
     while(1){
         int floor = elevio_floorSensor();
+        setFloorLight(floor);
 
         if(floor == 0){
             elevio_motorDirection(DIRN_UP);
