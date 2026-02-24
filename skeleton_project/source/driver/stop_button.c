@@ -1,4 +1,5 @@
 #include "stop_button.h"
+#include "door.h"
 
 void activate_stop_light(void) {
     if (elevio_stopButton() == 1) {
@@ -13,8 +14,7 @@ void activate_stop_light(void) {
 
 void open_door_when_stop(int floor){
     if ((floor != -1) && (elevio_stopButton() == 1)) {
-        elevio_doorOpenLamp(1);
-        
+        current_door_state = OPEN;
     }
 }
 
@@ -36,14 +36,14 @@ void keep_door_open_when_not_stop(int floor){
         elevio_motorDirection(DIRN_STOP);
         if ((elevio_stopButton()==0)  && (floor != -1)){
             printf("%s\n", "Timer has started");
-            elevio_doorOpenLamp(1);
+            current_door_state = OPEN;
             sleep(3);
-            elevio_doorOpenLamp(0);
+            current_door_state = CLOSED;
             //fix direction after stop
             printf("%s\n", "Timer has ended");
             current_stop_button_state=STOP0;
         } else if (floor == -1) {
-            elevio_doorOpenLamp(0);
+            current_door_state = CLOSED;
         }
         break;
     

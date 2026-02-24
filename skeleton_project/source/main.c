@@ -5,6 +5,7 @@
 //#include "driver/elevio.h"
 #include "driver/floor_light.h"
 #include "driver/stop_button.h"
+#include "driver/door.h"
 
 
 
@@ -21,7 +22,8 @@ int main(){
         setFloorLight(floor); //*
         activate_stop_light(); //*
         open_door_when_stop(floor); //*
-        keep_door_open_when_not_stop(floor);
+        keep_door_open_when_not_stop(floor);//*
+        door_state_implementation();//*
 
         printf("%d\n", elevio_stopButton()); //*
 
