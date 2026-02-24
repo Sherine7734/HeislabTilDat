@@ -24,7 +24,7 @@ int main(){
         open_door_when_stop(floor); //*
         keep_door_open_when_not_stop(floor);//*
         door_state_implementation();//*
-
+        door_obstruction();//*
         printf("%d\n", elevio_stopButton()); //*
 
         if(floor == 0){

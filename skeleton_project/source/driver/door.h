@@ -13,3 +13,12 @@ typedef enum door_state {
 extern Door_State current_door_state;
 
 void door_state_implementation(void);
+
+//State
+typedef enum obstruction_state {
+    NOTOBSTRUCT, OBSTRUCT
+} Obstruction_State;
+
+extern Obstruction_State current_obstruction_state;
+
+void door_obstruction(void);

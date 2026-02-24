@@ -1,5 +1,5 @@
 #include "stop_button.h"
-#include "door.h"
+
 
 void activate_stop_light(void) {
     if (elevio_stopButton() == 1) {
