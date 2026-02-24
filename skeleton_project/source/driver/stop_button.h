@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "elevio.h"
 #include <time.h>
-#include<unistd.h>
+#include <unistd.h>
 #include "door.h"
 
 void activate_stop_light(void);

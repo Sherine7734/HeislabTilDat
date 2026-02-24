@@ -6,6 +6,8 @@
 #include "driver/floor_light.h"
 #include "driver/stop_button.h"
 #include "driver/door.h"
+#include "driver/motor.h"
+#include "driver/start_up.h"
 
 
 
@@ -15,17 +17,22 @@ int main(){
     printf("=== Example Program ===\n");
     printf("Press the stop button on the elevator panel to exit\n");
 
-    elevio_motorDirection(DIRN_UP);
+    //elevio_motorDirection(DIRN_UP);
+    int floor = elevio_floorSensor();
+    start_up(floor);//HELP!!!!!!!!! How do we get the elevator to start going down?????
+
 
     while(1){
-        int floor = elevio_floorSensor();
+        printf("%d\n", floor);
+        floor = elevio_floorSensor();
         setFloorLight(floor); //*
         activate_stop_light(); //*
         open_door_when_stop(floor); //*
         keep_door_open_when_not_stop(floor);//*
         door_state_implementation();//*
         door_obstruction();//*
-        printf("%d\n", elevio_stopButton()); //*
+        //printf("%s\n", "StopButton:");//*
+        //printf("%d\n", elevio_stopButton()); //*
 
         if(floor == 0){
             elevio_motorDirection(DIRN_UP);

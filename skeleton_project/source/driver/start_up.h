@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "elevio.h"
-#include <time.h>
-#include<unistd.h>
+#include "motor.h"
 
-void start_up(void);
+void start_up(int floor);
