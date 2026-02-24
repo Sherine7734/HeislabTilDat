@@ -2,7 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "elevio.h"
+#include <time.h>
+#include<unistd.h>
 
 void activate_stop_light(void);
 
 void open_door_when_stop(int floor);
+
+    //State
+    typedef enum stop_button_state {
+        STOP0, STOP1
+    } Stop_Button_State;
+
+void keep_door_open_when_not_stop(int floor);

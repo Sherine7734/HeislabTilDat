@@ -18,11 +18,12 @@ int main(){
 
     while(1){
         int floor = elevio_floorSensor();
-        setFloorLight(floor);
-        activate_stop_light();
-        open_door_when_stop(floor);
+        setFloorLight(floor); //*
+        activate_stop_light(); //*
+        open_door_when_stop(floor); //*
+        keep_door_open_when_not_stop(floor);
 
-        printf("%d\n", elevio_stopButton());
+        printf("%d\n", elevio_stopButton()); //*
 
         if(floor == 0){
             elevio_motorDirection(DIRN_UP);
