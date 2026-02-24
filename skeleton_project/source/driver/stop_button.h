@@ -10,10 +10,10 @@ void activate_stop_light(void);
 
 void open_door_when_stop(int floor);
 
-    //State
-    typedef enum stop_button_state {
-        STOP0, STOP1
-    } Stop_Button_State;
+//State
+typedef enum stop_button_state {
+    STOP0, STOP1
+} Stop_Button_State;
 
 extern Stop_Button_State current_stop_button_state;
 
