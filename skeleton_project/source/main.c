@@ -17,7 +17,7 @@ int main(){
     printf("=== Example Program ===\n");
     printf("Press the stop button on the elevator panel to exit\n");
 
-    //elevio_motorDirection(DIRN_UP);
+    elevio_motorDirection(DIRN_DOWN);
     int floor = elevio_floorSensor();
     start_up(floor);//HELP!!!!!!!!! How do we get the elevator to start going down?????
 
