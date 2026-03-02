@@ -26,7 +26,16 @@ void setOrder(int floor){
     case ORDER_ON:{
     
     if (floor == 0) {
+        elevio_motorDirection(DIRN_STOP);
+        current_door_state = OPEN;
+        elevio_doorOpenLamp(1);
+        sleep(3);
+        current_door_state = CLOSED;
+        elevio_doorOpenLamp(0);
         printf("%s\n", "ORDER UP0 COMPLETED");
+        elevio_motorDirection(DIRN_UP);
+        current_motor_dir_state = OUR_DIRN_UP;
+        //if no orders, stay still, otherwise go up. Prioritize which direction to go
         current_UP0_ORDER_state = ORDER_OFF;
         
     }
@@ -223,7 +232,9 @@ void setOrder(int floor){
     }
     break;
     }
-
-
     
+}
+
+void handleOrder(void){
+
 }
