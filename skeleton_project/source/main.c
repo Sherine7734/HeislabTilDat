@@ -8,7 +8,8 @@
 #include "driver/door.h"
 #include "driver/motor.h"
 #include "driver/start_up.h"
-
+#include "driver/order_light.h"
+#include "driver/orders.h"
 
 
 int main(){
@@ -31,6 +32,8 @@ int main(){
         keep_door_open_when_not_stop(floor);//*
         door_state_implementation();//*
         door_obstruction();//*
+        setOrderLightState(); //*
+        setOrder(floor);
         //printf("%s\n", "StopButton:");//*
         //printf("%d\n", elevio_stopButton()); //*
 
@@ -43,12 +46,12 @@ int main(){
         }
 
 
-        for(int f = 0; f < N_FLOORS; f++){
-            for(int b = 0; b < N_BUTTONS; b++){
-                int btnPressed = elevio_callButton(f, b);
-                elevio_buttonLamp(f, b, btnPressed);
-            }
-        }
+        //for(int f = 0; f < N_FLOORS; f++){
+        //    for(int b = 0; b < N_BUTTONS; b++){
+        //        int btnPressed = elevio_callButton(f, b);
+        //        elevio_buttonLamp(f, b, btnPressed);
+        //    }
+        //}
 
         if(elevio_obstruction()){
             elevio_stopLamp(1);

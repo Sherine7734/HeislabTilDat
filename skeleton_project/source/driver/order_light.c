@@ -18,19 +18,92 @@ void setOrderLightState(void){
     switch(current_UP0_state){
     case OFF:
     elevio_buttonLamp(0, BUTTON_HALL_UP, 0);
-    if (elevio_callButton(0, BUTTON_HALL_UP) == 1) {
-      elevio_buttonLamp(0, BUTTON_HALL_UP, 1);
-      current_UP0_state = ON;
-    }
     break;
     case ON:{
     elevio_buttonLamp(0, BUTTON_HALL_UP, 1);
-    if (elevio_callButton(0, BUTTON_HALL_UP) == 0) {
-      elevio_buttonLamp(0, BUTTON_HALL_UP, 0);
-      current_UP0_state = OFF;
-    }
-    }
     break;
-    }
+    }}
+
+    switch(current_UP1_state){
+    case OFF:
+    elevio_buttonLamp(1, BUTTON_HALL_UP, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(1, BUTTON_HALL_UP, 1);
+    break;
+    }}
+
+    switch(current_DOWN1_state){
+    case OFF:
+    elevio_buttonLamp(1, BUTTON_HALL_DOWN, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(1, BUTTON_HALL_DOWN, 1);
+    break;
+    }}
+
+    switch(current_UP2_state){
+    case OFF:
+    elevio_buttonLamp(2, BUTTON_HALL_UP, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(2, BUTTON_HALL_UP, 1);
+    break;
+    }}
+
+    switch(current_DOWN2_state){
+    case OFF:
+    elevio_buttonLamp(2, BUTTON_HALL_DOWN, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(2, BUTTON_HALL_DOWN, 1);
+    break;
+    }}
+
+    switch(current_DOWN3_state){
+    case OFF:
+    elevio_buttonLamp(3, BUTTON_HALL_DOWN, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(3, BUTTON_HALL_DOWN, 1);
+    break;
+    }}
+
+    switch(current_OUTSIDE0_state){
+    case OFF:
+    elevio_buttonLamp(0, BUTTON_CAB, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(0, BUTTON_CAB, 1);
+    break;
+    }}
+
+    switch(current_OUTSIDE1_state){
+    case OFF:
+    elevio_buttonLamp(1, BUTTON_CAB, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(1, BUTTON_CAB, 1);
+    break;
+    }}
+
+    switch(current_OUTSIDE2_state){
+    case OFF:
+    elevio_buttonLamp(2, BUTTON_CAB, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(2, BUTTON_CAB, 1);
+    break;
+    }}
+
+    switch(current_OUTSIDE3_state){
+    case OFF:
+    elevio_buttonLamp(3, BUTTON_CAB, 0);
+    break;
+    case ON:{
+    elevio_buttonLamp(3, BUTTON_CAB, 1);
+    break;
+    }}
+
 }
 

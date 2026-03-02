@@ -22,5 +22,5 @@ extern Order_Light_State current_OUTSIDE1_state;
 extern Order_Light_State current_OUTSIDE2_state;
 extern Order_Light_State current_OUTSIDE3_state;
 
-
+void setOrderLightState(void);
 
