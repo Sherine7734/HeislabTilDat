@@ -46,7 +46,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if (floor == 1) {
+    if ((floor == 1) && (current_motor_dir_state == OUR_DIRN_UP)){
         printf("%s\n", "ORDER UP1 COMPLETED");
         current_UP1_ORDER_state = ORDER_OFF;
         current_UP1_state = OFF;
@@ -67,7 +67,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if (floor == 1) {
+    if ((floor == 1) && (current_motor_dir_state == OUR_DIRN_DOWN)) {
         printf("%s\n", "ORDER DOWN1 COMPLETED");
         current_DOWN1_ORDER_state = ORDER_OFF;
         current_DOWN1_state = OFF;
@@ -88,7 +88,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if (floor == 2) {
+    if ((floor == 2) && (current_motor_dir_state == OUR_DIRN_UP)) {
         printf("%s\n", "ORDER UP2 COMPLETED");
         current_UP2_ORDER_state = ORDER_OFF;
         current_UP2_state = OFF;
@@ -109,7 +109,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if (floor == 2) {
+    if ((floor == 2) && (current_motor_dir_state == OUR_DIRN_DOWN)) {
         printf("%s\n", "ORDER DOWN2 COMPLETED");
         current_DOWN2_ORDER_state = ORDER_OFF;
         current_DOWN2_state = OFF;

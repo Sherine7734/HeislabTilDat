@@ -5,6 +5,7 @@
 #include <time.h>
 #include <unistd.h>
 #include "order_light.h"
+#include "motor.h"
 
 //State
 typedef enum order_state {
