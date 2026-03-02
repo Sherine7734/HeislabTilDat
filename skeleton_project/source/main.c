@@ -18,9 +18,9 @@ int main(){
     printf("=== Example Program ===\n");
     printf("Press the stop button on the elevator panel to exit\n");
 
-    elevio_motorDirection(DIRN_DOWN);
+    //elevio_motorDirection(DIRN_DOWN);
     int floor = elevio_floorSensor();
-    start_up(floor);//HELP!!!!!!!!! How do we get the elevator to start going down?????
+    start_up(floor);
 
 
     while(1){
@@ -33,16 +33,19 @@ int main(){
         door_state_implementation();//*
         door_obstruction();//*
         setOrderLightState(); //*
-        setOrder(floor);
+        setOrder(floor);//*
+        motor_dir_state_implementation();
         //printf("%s\n", "StopButton:");//*
         //printf("%d\n", elevio_stopButton()); //*
 
         if(floor == 0){
             elevio_motorDirection(DIRN_UP);
+            current_motor_dir_state = OUR_DIRN_UP;
         }
 
         if(floor == N_FLOORS-1){
             elevio_motorDirection(DIRN_DOWN);
+            current_motor_dir_state = OUR_DIRN_DOWN;
         }
 
 

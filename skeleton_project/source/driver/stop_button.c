@@ -34,6 +34,7 @@ void keep_door_open_when_not_stop(int floor){
     case STOP1:
         //printf("%s\n", "In STOP1");
         elevio_motorDirection(DIRN_STOP);
+        current_motor_dir_state = OUR_DIRN_STOP;
         if ((elevio_stopButton()==0)  && (floor != -1)){
             printf("%s\n", "Timer has started");
             current_door_state = OPEN;

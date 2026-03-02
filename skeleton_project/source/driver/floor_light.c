@@ -4,19 +4,19 @@
 
 void setFloorLight(int floor){
     if (floor == 0) {
-        printf("%s\n", "Floor light 0");
+        //printf("%s\n", "Floor light 0");
         elevio_floorIndicator(0);
     } else if (floor == 1) {
-        printf("%s\n", "Floor light 1");
+        //printf("%s\n", "Floor light 1");
         elevio_floorIndicator(1);
     } else if (floor == 2) {
-        printf("%s\n", "Floor light 2");
+        //printf("%s\n", "Floor light 2");
         elevio_floorIndicator(2);
     } else if (floor == 3) {
-        printf("%s\n", "Floor light 3");
+        //printf("%s\n", "Floor light 3");
         elevio_floorIndicator(3);
     } else if (floor == -1) {
-        printf("%s\n", "In between");
+        //printf("%s\n", "In between");
     }
 }
 
