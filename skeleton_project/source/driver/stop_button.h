@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include "door.h"
 #include "motor.h"
+#include "orders.h"
 
 void activate_stop_light(void);
 
