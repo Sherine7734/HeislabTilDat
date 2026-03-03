@@ -21,6 +21,7 @@ int main(){
     //elevio_motorDirection(DIRN_DOWN);
     int floor = elevio_floorSensor();
     start_up(floor);
+    sleep(4); //Wait for start up to finish!
 
 
     while(1){

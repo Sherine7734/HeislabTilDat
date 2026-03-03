@@ -38,7 +38,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:
     
-    if (floor == 0) {
+    if (floor == 0)  {
         elevio_motorDirection(DIRN_STOP);
         current_door_state = OPEN;
         elevio_doorOpenLamp(1);
@@ -46,7 +46,7 @@ void setOrder(int floor){
         current_door_state = CLOSED;
         elevio_doorOpenLamp(0);
         printf("%s\n", "ORDER UP0 COMPLETED");
-        //if no orders, stay still, otherwise go up. Prioritize which direction to go
+        //MAYBE 
         current_UP0_ORDER_state = ORDER_OFF;
         
     }
@@ -79,7 +79,7 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if ((floor == 1) && (current_motor_dir_state == OUR_DIRN_UP)){
+    if (((floor == 1) && (current_motor_dir_state == OUR_DIRN_UP)) || ((floor == 1) && (current_UP0_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF)){
         elevio_motorDirection(DIRN_STOP);
         current_door_state = OPEN;
         elevio_doorOpenLamp(1);
@@ -98,6 +98,20 @@ void setOrder(int floor){
     switch(current_DOWN1_ORDER_state){
     case ORDER_OFF:
     current_DOWN1_state = OFF;
+
+
+    if ((floor == 1) && (current_UP0_ORDER_state  || current_OUTSIDE0_ORDER_state) == ORDER_ON){
+        printf("%s\n", "IF NR 1");
+        elevio_motorDirection(DIRN_DOWN);
+        current_motor_dir_state = OUR_DIRN_DOWN;
+
+    }  
+    else if (((floor == 1) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF) && (current_motor_dir_state == OUR_DIRN_DOWN)){
+        printf("%s\n", "IF NR 2");
+        elevio_motorDirection(DIRN_STOP);
+        current_motor_dir_state = OUR_DIRN_STOP;
+    }
+
     if (elevio_callButton(1, BUTTON_HALL_DOWN) == 1) {
 
         printf("%s\n", "ORDER DOWN1 CREATED");
@@ -105,13 +119,18 @@ void setOrder(int floor){
         current_DOWN1_state = ON;
     }
     break;
-    case ORDER_ON:{
+    case ORDER_ON:
     
-    if ((floor == 1) && (current_motor_dir_state == OUR_DIRN_DOWN)) {
+    if (((floor == 1) && (current_motor_dir_state == OUR_DIRN_DOWN)) || ((floor == 1) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN2_ORDER_state && current_UP2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF)) {
+        elevio_motorDirection(DIRN_STOP);
+        current_door_state = OPEN;
+        elevio_doorOpenLamp(1);
+        sleep(3);
+        current_door_state = CLOSED;
+        elevio_doorOpenLamp(0);
         printf("%s\n", "ORDER DOWN1 COMPLETED");
         current_DOWN1_ORDER_state = ORDER_OFF;
         
-    }
     }
     break;
     }
@@ -158,6 +177,19 @@ void setOrder(int floor){
     switch(current_DOWN2_ORDER_state){
     case ORDER_OFF:
     current_DOWN2_state = OFF;
+
+    if ((floor == 2) && (current_UP0_ORDER_state || current_UP1_ORDER_state || current_DOWN1_ORDER_state ||current_OUTSIDE0_ORDER_state || current_OUTSIDE1_ORDER_state) == ORDER_ON){
+        printf("%s\n", "IF NR 1");
+        elevio_motorDirection(DIRN_DOWN);
+        current_motor_dir_state = OUR_DIRN_DOWN;
+
+    }  
+    else if (((floor == 2) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF) && (current_motor_dir_state == OUR_DIRN_DOWN)){
+        printf("%s\n", "IF NR 2");
+        elevio_motorDirection(DIRN_STOP);
+        current_motor_dir_state = OUR_DIRN_STOP;
+    }
+
     if (elevio_callButton(2, BUTTON_HALL_DOWN) == 1) {
 
         printf("%s\n", "ORDER DOWN2 CREATED");
@@ -165,14 +197,20 @@ void setOrder(int floor){
         current_DOWN2_state = ON;
     }
     break;
-    case ORDER_ON:{
+    case ORDER_ON:
     
-    if ((floor == 2) && (current_motor_dir_state == OUR_DIRN_DOWN)) {
+    if (((floor == 2) && (current_motor_dir_state == OUR_DIRN_DOWN)) || ((floor == 2) && (current_UP0_ORDER_state && current_DOWN1_ORDER_state && current_UP1_ORDER_state && current_UP2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF)) {
+        elevio_motorDirection(DIRN_STOP);
+        current_door_state = OPEN;
+        elevio_doorOpenLamp(1);
+        sleep(3);
+        current_door_state = CLOSED;
+        elevio_doorOpenLamp(0);
         printf("%s\n", "ORDER DOWN2 COMPLETED");
         current_DOWN2_ORDER_state = ORDER_OFF;
         
     }
-    }
+    
     break;
     }
 
@@ -189,7 +227,7 @@ void setOrder(int floor){
     else if ((floor == 3) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF){
         printf("%s\n", "IF NR 2");
         elevio_motorDirection(DIRN_STOP);
-        current_motor_dir_state = OUR_DIRN_STOP; //MAYBE UNNECESSARY??
+        current_motor_dir_state = OUR_DIRN_STOP;
     }
 
     if (elevio_callButton(3, BUTTON_HALL_DOWN) == 1) {
@@ -257,6 +295,14 @@ void setOrder(int floor){
     switch(current_OUTSIDE1_ORDER_state){
     case ORDER_OFF:
     current_OUTSIDE1_state = OFF;
+
+    
+    if (((floor == 1) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF) && (current_motor_dir_state == OUR_DIRN_DOWN)){
+        printf("%s\n", "IF NR 2");
+        elevio_motorDirection(DIRN_STOP);
+        current_motor_dir_state = OUR_DIRN_STOP;
+    }
+
     if (elevio_callButton(1, BUTTON_CAB) == 1) {
 
         printf("%s\n", "ORDER OUTSIDE1 CREATED");
@@ -264,20 +310,32 @@ void setOrder(int floor){
         current_OUTSIDE1_state = ON;
     }
     break;
-    case ORDER_ON:{
-    
-    if (floor == 1) {
-        printf("%s\n", "ORDER OUTSIDE1 COMPLETED");
-        current_OUTSIDE1_ORDER_state = ORDER_OFF;
+    case ORDER_ON:
+
+    if (((floor == 1)) || ((floor == 1) && (current_UP0_ORDER_state && current_DOWN1_ORDER_state && current_UP1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF)) {
+            elevio_motorDirection(DIRN_STOP);
+            current_door_state = OPEN;
+            elevio_doorOpenLamp(1);
+            sleep(3);
+            current_door_state = CLOSED;
+            elevio_doorOpenLamp(0);
+            printf("%s\n", "ORDER OUTSIDE1 COMPLETED");
+            current_OUTSIDE1_ORDER_state = ORDER_OFF;
+            
         
-    }
-    }
     break;
     }
 
     switch(current_OUTSIDE2_ORDER_state){
     case ORDER_OFF:
     current_OUTSIDE2_state = OFF;
+
+    if (((floor == 2) && (current_UP0_ORDER_state && current_UP1_ORDER_state && current_DOWN1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE2_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF) && (current_motor_dir_state == OUR_DIRN_DOWN)){
+        printf("%s\n", "IF NR 2");
+        elevio_motorDirection(DIRN_STOP);
+        current_motor_dir_state = OUR_DIRN_STOP;
+    }
+
     if (elevio_callButton(2, BUTTON_CAB) == 1) {
 
         printf("%s\n", "ORDER OUTSIDE2 CREATED");
@@ -287,11 +345,16 @@ void setOrder(int floor){
     break;
     case ORDER_ON:{
     
-    if (floor == 2) {
-        printf("%s\n", "ORDER OUTSIDE2 COMPLETED");
-        current_OUTSIDE2_ORDER_state = ORDER_OFF;
-        
-    }
+    if (((floor == 2)) || ((floor == 2) && (current_UP0_ORDER_state && current_DOWN1_ORDER_state && current_UP1_ORDER_state && current_UP2_ORDER_state && current_DOWN2_ORDER_state && current_DOWN3_ORDER_state && current_OUTSIDE0_ORDER_state && current_OUTSIDE1_ORDER_state && current_OUTSIDE3_ORDER_state) == ORDER_OFF)) {
+            elevio_motorDirection(DIRN_STOP);
+            current_door_state = OPEN;
+            elevio_doorOpenLamp(1);
+            sleep(3);
+            current_door_state = CLOSED;
+            elevio_doorOpenLamp(0);
+            printf("%s\n", "ORDER OUTSIDE2 COMPLETED");
+            current_OUTSIDE2_ORDER_state = ORDER_OFF;
+            
     }
     break;
     }
@@ -336,7 +399,4 @@ void setOrder(int floor){
     }
     
 }
-
-void handleOrder(void){
-
-}
+}}
