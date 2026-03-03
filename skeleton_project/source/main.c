@@ -38,15 +38,15 @@ int main(){
         //printf("%s\n", "StopButton:");//*
         //printf("%d\n", elevio_stopButton()); //*
 
-        if(floor == 0){
-            elevio_motorDirection(DIRN_UP);
-            current_motor_dir_state = OUR_DIRN_UP;
-        }
+        //if(floor == 0){
+        //    elevio_motorDirection(DIRN_UP);
+        //    current_motor_dir_state = OUR_DIRN_UP;
+        //}
 
-        if(floor == N_FLOORS-1){
-            elevio_motorDirection(DIRN_DOWN);
-            current_motor_dir_state = OUR_DIRN_DOWN;
-        }
+        //if(floor == N_FLOORS-1){
+        //    elevio_motorDirection(DIRN_DOWN);
+        //    current_motor_dir_state = OUR_DIRN_DOWN;
+        //}
 
 
         //for(int f = 0; f < N_FLOORS; f++){
