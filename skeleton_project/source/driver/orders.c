@@ -13,6 +13,7 @@ Order_State current_OUTSIDE2_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE3_ORDER_state = ORDER_OFF;
 
 void setOrder(int floor){
+
     switch(current_UP0_ORDER_state){
     case ORDER_OFF:
     current_UP0_state = OFF;
@@ -58,7 +59,7 @@ void setOrder(int floor){
     case ORDER_OFF:
     current_UP1_state = OFF;
     //Når vi er på vei ned fra DOWN4, og UP2 er på, så går den først ned til UP1, og så opp til UP2
-    if (((floor == 1) && ((current_UP2_ORDER_state || current_DOWN2_ORDER_state || current_DOWN3_ORDER_state || current_OUTSIDE2_ORDER_state || current_OUTSIDE3_ORDER_state) == ORDER_ON))){
+    if (((floor == 1) && ((current_UP2_ORDER_state || current_DOWN2_ORDER_state || current_DOWN3_ORDER_state || current_OUTSIDE2_ORDER_state || current_OUTSIDE3_ORDER_state) == ORDER_ON)) && (current_motor_dir_state == OUR_DIRN_UP)){
         printf("%s\n", "YES1");
         elevio_motorDirection(DIRN_UP);
         current_motor_dir_state = OUR_DIRN_UP;
@@ -100,7 +101,7 @@ void setOrder(int floor){
     current_DOWN1_state = OFF;
 
 
-    if ((floor == 1) && (current_UP0_ORDER_state  || current_OUTSIDE0_ORDER_state) == ORDER_ON){
+    if (((floor == 1) && (current_UP0_ORDER_state  || current_OUTSIDE0_ORDER_state)  == ORDER_ON) && (current_motor_dir_state == OUR_DIRN_DOWN)){
         printf("%s\n", "IF NR 1");
         elevio_motorDirection(DIRN_DOWN);
         current_motor_dir_state = OUR_DIRN_DOWN;
@@ -139,7 +140,7 @@ void setOrder(int floor){
     case ORDER_OFF:
     current_UP2_state = OFF;
     
-    if (((floor == 2) && ((current_DOWN3_ORDER_state || current_OUTSIDE3_ORDER_state) == ORDER_ON))){
+    if (((floor == 2) && ((current_DOWN3_ORDER_state || current_OUTSIDE3_ORDER_state) == ORDER_ON)) && (current_motor_dir_state == OUR_DIRN_UP)){
         printf("%s\n", "YES11");
         elevio_motorDirection(DIRN_UP);
         current_motor_dir_state = OUR_DIRN_UP;
@@ -178,7 +179,7 @@ void setOrder(int floor){
     case ORDER_OFF:
     current_DOWN2_state = OFF;
 
-    if ((floor == 2) && (current_UP0_ORDER_state || current_UP1_ORDER_state || current_DOWN1_ORDER_state ||current_OUTSIDE0_ORDER_state || current_OUTSIDE1_ORDER_state) == ORDER_ON){
+    if (((floor == 2) && (current_UP0_ORDER_state || current_UP1_ORDER_state || current_DOWN1_ORDER_state ||current_OUTSIDE0_ORDER_state || current_OUTSIDE1_ORDER_state) == ORDER_ON) && (current_motor_dir_state == OUR_DIRN_DOWN)) {
         printf("%s\n", "IF NR 1");
         elevio_motorDirection(DIRN_DOWN);
         current_motor_dir_state = OUR_DIRN_DOWN;

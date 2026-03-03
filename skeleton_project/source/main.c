@@ -11,6 +11,7 @@
 #include "driver/order_light.h"
 #include "driver/orders.h"
 
+//Fix that when an order becomes active, if no other orders are active, we choose the motor direction!!!!!!
 
 int main(){
     elevio_init();
