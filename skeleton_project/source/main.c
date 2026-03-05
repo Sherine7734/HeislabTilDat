@@ -12,6 +12,8 @@
 #include "driver/orders.h"
 
 //Fix that when an order becomes active, if no other orders are active, we choose the motor direction!!!!!!
+//When two orders want separate motor dir, we prioritize down. 
+//
 
 int main(){
     elevio_init();
@@ -22,23 +24,24 @@ int main(){
     //elevio_motorDirection(DIRN_DOWN);
     int floor = elevio_floorSensor();
     start_up(floor);
-    sleep(4); //Wait for start up to finish!
+    sleep(8); //Wait for start up to finish!
 
 
     while(1){
-        printf("%d\n", floor);
+        //printf("%d\n", floor);
         floor = elevio_floorSensor();
+        motor_dir_state_implementation();
         setFloorLight(floor); //*
         activate_stop_light(); //*
         open_door_when_stop(floor); //*
         keep_door_open_when_not_stop(floor);//*
         door_state_implementation();//*
         door_obstruction();//*
-        setOrderLightState(); //*
         setOrder(floor);//*
-        motor_dir_state_implementation();
+        setOrderLightState(); //*
+    
         //printf("%s\n", "StopButton:");//*
-        //printf("%d\n", elevio_stopButton()); //*
+        printf("%d\n", current_motor_dir_state); //*
 
         //if(floor == 0){
         //    elevio_motorDirection(DIRN_UP);
