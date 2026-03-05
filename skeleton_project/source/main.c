@@ -36,8 +36,8 @@ int main(){
         open_door_when_stop(floor); //*
         keep_door_open_when_not_stop(floor);//*
         door_state_implementation();//*
-        door_obstruction();//*
-        setOrder(floor);//*
+        door_obstruction(floor);//*
+        setOrder(floor, current_door_state, current_obstruction_state);//*
         setOrderLightState(); //*
     
         //printf("%s\n", "StopButton:");//*
@@ -61,11 +61,11 @@ int main(){
         //    }
         //}
 
-        if(elevio_obstruction()){
-            elevio_stopLamp(1);
-        } else {
-            elevio_stopLamp(0);
-        }
+        //if(elevio_obstruction()){
+        //    elevio_stopLamp(1);
+        //} else {
+        //    elevio_stopLamp(0);
+        //}
         
         if(elevio_stopButton()){
             elevio_motorDirection(DIRN_STOP);

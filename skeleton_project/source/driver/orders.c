@@ -12,7 +12,7 @@ Order_State current_OUTSIDE1_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE2_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE3_ORDER_state = ORDER_OFF;
 
-void setOrder(int floor){
+void setOrder(int floor, Door_State current_door_state, Obstruction_State current_obstruction_state){
 
     switch(current_UP0_ORDER_state){
     case ORDER_OFF:
@@ -24,7 +24,7 @@ void setOrder(int floor){
     }  
     else if ((floor == 0) && ((current_UP0_ORDER_state == ORDER_OFF) && current_UP1_ORDER_state == ORDER_OFF && current_DOWN1_ORDER_state == ORDER_OFF && current_UP2_ORDER_state == ORDER_OFF && current_DOWN2_ORDER_state == ORDER_OFF && current_DOWN3_ORDER_state == ORDER_OFF && current_OUTSIDE0_ORDER_state == ORDER_OFF && current_OUTSIDE1_ORDER_state == ORDER_OFF && current_OUTSIDE2_ORDER_state == ORDER_OFF && current_OUTSIDE3_ORDER_state == ORDER_OFF)){
         elevio_motorDirection(DIRN_STOP);
-        current_motor_dir_state = OUR_DIRN_STOP; //MAYBE UNNECESSARY??
+        current_motor_dir_state = OUR_DIRN_STOP; 
 
     }
 
@@ -45,10 +45,15 @@ void setOrder(int floor){
         current_door_state = OPEN;
         elevio_doorOpenLamp(1);
         sleep(3);
+        //if current_door obstruction == 1, keep door open. THIS DOESN'T WORK??
+        if (current_obstruction_state == OBSTRUCT){
+            current_door_state = OPEN;
+            elevio_doorOpenLamp(1);
+        } else {
         current_door_state = CLOSED;
         elevio_doorOpenLamp(0);
         printf("%s\n", "ORDER UP0 COMPLETED");
-        current_UP0_ORDER_state = ORDER_OFF;
+        current_UP0_ORDER_state = ORDER_OFF;}
         
     }
     

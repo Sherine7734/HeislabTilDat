@@ -27,5 +27,5 @@ extern Order_State current_OUTSIDE1_ORDER_state;
 extern Order_State current_OUTSIDE2_ORDER_state;
 extern Order_State current_OUTSIDE3_ORDER_state;
 
-void setOrder(int floor);
+void setOrder(int floor, Door_State current_door_state, Obstruction_State current_obstruction_state);
 

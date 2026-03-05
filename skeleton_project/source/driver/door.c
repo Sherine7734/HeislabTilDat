@@ -16,7 +16,7 @@ void door_state_implementation(void){
 
 Obstruction_State current_obstruction_state = NOTOBSTRUCT;
 
-void door_obstruction(void){
+void door_obstruction(int floor){
     switch(current_obstruction_state){
     case NOTOBSTRUCT:
     if (elevio_obstruction() == 1){
@@ -32,6 +32,7 @@ void door_obstruction(void){
         }
         current_obstruction_state = NOTOBSTRUCT;
     }
+
     break;
     }
 

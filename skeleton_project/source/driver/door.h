@@ -21,4 +21,4 @@ typedef enum obstruction_state {
 
 extern Obstruction_State current_obstruction_state;
 
-void door_obstruction(void);
+void door_obstruction(int floor);
