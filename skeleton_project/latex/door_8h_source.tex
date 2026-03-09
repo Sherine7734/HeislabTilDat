@@ -1,0 +1,33 @@
+\doxysection{door.\+h}
+\hypertarget{door_8h_source}{}\label{door_8h_source}\index{source/driver/door.h@{source/driver/door.h}}
+\mbox{\hyperlink{door_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00008}00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}elevio.h"{}}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00017}00017\ \textcolor{comment}{//State}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00021}\mbox{\hyperlink{door_8h_ab6dbdf75af6716dab807ce2a2955d030}{00021}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{door_8h_ab6dbdf75af6716dab807ce2a2955d030}{door\_state}}\ \{}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00022}00022\ \ \ \ \ CLOSED,\ OPEN}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00023}\mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{00023}}\ \}\ \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\_State}};}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00028}00028\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\_State}}\ \mbox{\hyperlink{door_8h_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}};}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00033}00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{door_8h_a449cc1f0995b223f24be41f40aa000f8}{door\_state\_implementation}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00035}00035\ \textcolor{comment}{//State}}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00039}\mbox{\hyperlink{door_8h_a2d75820b0442378d0e299165a10069aa}{00039}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{door_8h_a2d75820b0442378d0e299165a10069aa}{obstruction\_state}}\ \{}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00040}00040\ \ \ \ \ NOTOBSTRUCT,\ OBSTRUCT}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00041}\mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{00041}}\ \}\ \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\_State}};}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00046}00046\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\_State}}\ \mbox{\hyperlink{door_8h_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}};}
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{door_8h_source_l00051}00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{door_8h_a3195de0db68c687a2dafbd5cae109688}{door\_obstruction}}(\textcolor{keywordtype}{int}\ floor);}
+
+\end{DoxyCode}

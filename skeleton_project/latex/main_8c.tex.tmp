@@ -1,0 +1,51 @@
+\doxysection{source/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{source/main.c@{source/main.c}}
+
+
+Our main file that runs the simulation.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}driver/floor\+\_\+light.\+h"{}}\newline
+{\ttfamily \#include "{}driver/stop\+\_\+button.\+h"{}}\newline
+{\ttfamily \#include "{}driver/door.\+h"{}}\newline
+{\ttfamily \#include "{}driver/motor.\+h"{}}\newline
+{\ttfamily \#include "{}driver/start\+\_\+up.\+h"{}}\newline
+{\ttfamily \#include "{}driver/order\+\_\+light.\+h"{}}\newline
+{\ttfamily \#include "{}driver/orders.\+h"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em The main function containing all of our functions in a continous loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Our main file that runs the simulation. 
+
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main function containing all of our functions in a continous loop. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00026}{26}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

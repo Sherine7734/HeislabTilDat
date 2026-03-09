@@ -1,0 +1,27 @@
+\doxysection{start\+\_\+up.\+c}
+\hypertarget{start__up_8c_source}{}\label{start__up_8c_source}\index{source/driver/start\_up.c@{source/driver/start\_up.c}}
+\mbox{\hyperlink{start__up_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{start__up_8h}{start\_up.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00012}\mbox{\hyperlink{start__up_8c_ad76c85f036f3aac7ad89f0f44cd26ce2}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{start__up_8c_ad76c85f036f3aac7ad89f0f44cd26ce2}{start\_up}}(\textcolor{keywordtype}{int}\ floor)\{}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00013}00013\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}Start\ up"{}});}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00014}00014\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00015}00015\ \ \ \ \ elevio\_motorDirection(DIRN\_DOWN);}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{current\_motor\_dir\_state}}\ =\ OUR\_DIRN\_DOWN;}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (floor\ >\ 3)\{}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ floor\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00019}00019\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (floor\ <\ -\/1)\{}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ floor\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{if}\ (floor\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ elevio\_motorDirection(DIRN\_STOP);}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{current\_motor\_dir\_state}}\ =\ OUR\_DIRN\_STOP;}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//If\ we\ have\ not\ reached\ a\ floor,\ ignore\ all\ orders}}
+\DoxyCodeLine{\Hypertarget{start__up_8c_source_l00029}00029\ \}}
+
+\end{DoxyCode}

@@ -1,8 +1,16 @@
+/**
+ * @file
+ * @brief Implementation of a function that follows the motor direction
+ *
+ */
+
 #include "motor.h"
 
 OurMotorDirection current_motor_dir_state = OUR_DIRN_DOWN;
 
-
+/**
+ * @brief A function that switches between the motor direction states
+ */
 
 //A function that chooses which motor direction state we are in
 void motor_dir_state_implementation(void){

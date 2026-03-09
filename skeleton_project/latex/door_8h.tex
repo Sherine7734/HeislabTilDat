@@ -1,0 +1,152 @@
+\doxysection{source/driver/door.h File Reference}
+\hypertarget{door_8h}{}\label{door_8h}\index{source/driver/door.h@{source/driver/door.h}}
+
+
+Declares the functions, gives the states and makes instances for the door and the door obstruction.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}elevio.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for door.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{door_8h_a977c3664a40f5a72c93d5afc647f54fa}\label{door_8h_a977c3664a40f5a72c93d5afc647f54fa} 
+typedef enum \mbox{\hyperlink{door_8h_ab6dbdf75af6716dab807ce2a2955d030}{door\+\_\+state}} {\bfseries Door\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em An enum of the door states\+: closed and open. \end{DoxyCompactList}\item 
+\Hypertarget{door_8h_ade6a10a4a9c4763581986af376e4587b}\label{door_8h_ade6a10a4a9c4763581986af376e4587b} 
+typedef enum \mbox{\hyperlink{door_8h_a2d75820b0442378d0e299165a10069aa}{obstruction\+\_\+state}} {\bfseries Obstruction\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em An enum of the door obstuction states\+: notobstruct and obstruct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{door_8h_ab6dbdf75af6716dab807ce2a2955d030}{door\+\_\+state}} \{ {\bfseries CLOSED}
+, {\bfseries OPEN}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum of the door states\+: closed and open. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{door_8h_a2d75820b0442378d0e299165a10069aa}{obstruction\+\_\+state}} \{ {\bfseries NOTOBSTRUCT}
+, {\bfseries OBSTRUCT}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum of the door obstuction states\+: notobstruct and obstruct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{door_8h_a449cc1f0995b223f24be41f40aa000f8}{door\+\_\+state\+\_\+implementation}} (void)
+\begin{DoxyCompactList}\small\item\em Declaration of the door state function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{door_8h_a3195de0db68c687a2dafbd5cae109688}{door\+\_\+obstruction}} (int floor)
+\begin{DoxyCompactList}\small\item\em Declatration of the door state obstruction function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}} \mbox{\hyperlink{door_8h_aca10366a6e8097f2cc35846fca0be956}{current\+\_\+door\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em An instance of the door state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}} \mbox{\hyperlink{door_8h_a9e38ccfb190819408dc3ec55f84fba56}{current\+\_\+obstruction\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em An instance of the door obstruction state, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares the functions, gives the states and makes instances for the door and the door obstruction. 
+
+
+
+Definition in file \mbox{\hyperlink{door_8h_source}{door.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{door_8h_ab6dbdf75af6716dab807ce2a2955d030}\label{door_8h_ab6dbdf75af6716dab807ce2a2955d030} 
+\index{door.h@{door.h}!door\_state@{door\_state}}
+\index{door\_state@{door\_state}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{door\_state}{door\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{door_8h_ab6dbdf75af6716dab807ce2a2955d030}{door\+\_\+state}}}
+
+
+
+An enum of the door states\+: closed and open. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8h_source_l00021}{21}} of file \mbox{\hyperlink{door_8h_source}{door.\+h}}.
+
+\Hypertarget{door_8h_a2d75820b0442378d0e299165a10069aa}\label{door_8h_a2d75820b0442378d0e299165a10069aa} 
+\index{door.h@{door.h}!obstruction\_state@{obstruction\_state}}
+\index{obstruction\_state@{obstruction\_state}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{obstruction\_state}{obstruction\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{door_8h_a2d75820b0442378d0e299165a10069aa}{obstruction\+\_\+state}}}
+
+
+
+An enum of the door obstuction states\+: notobstruct and obstruct. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8h_source_l00039}{39}} of file \mbox{\hyperlink{door_8h_source}{door.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{door_8h_a3195de0db68c687a2dafbd5cae109688}\label{door_8h_a3195de0db68c687a2dafbd5cae109688} 
+\index{door.h@{door.h}!door\_obstruction@{door\_obstruction}}
+\index{door\_obstruction@{door\_obstruction}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{door\_obstruction()}{door\_obstruction()}}
+{\footnotesize\ttfamily void door\+\_\+obstruction (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Declatration of the door state obstruction function. 
+
+Declatration of the door state obstruction function. 
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00032}{32}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+\Hypertarget{door_8h_a449cc1f0995b223f24be41f40aa000f8}\label{door_8h_a449cc1f0995b223f24be41f40aa000f8} 
+\index{door.h@{door.h}!door\_state\_implementation@{door\_state\_implementation}}
+\index{door\_state\_implementation@{door\_state\_implementation}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{door\_state\_implementation()}{door\_state\_implementation()}}
+{\footnotesize\ttfamily void door\+\_\+state\+\_\+implementation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Declaration of the door state function. 
+
+Declaration of the door state function. 
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00015}{15}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{door_8h_aca10366a6e8097f2cc35846fca0be956}\label{door_8h_aca10366a6e8097f2cc35846fca0be956} 
+\index{door.h@{door.h}!current\_door\_state@{current\_door\_state}}
+\index{current\_door\_state@{current\_door\_state}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{current\_door\_state}{current\_door\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}} current\+\_\+door\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An instance of the door state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00009}{9}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+\Hypertarget{door_8h_a9e38ccfb190819408dc3ec55f84fba56}\label{door_8h_a9e38ccfb190819408dc3ec55f84fba56} 
+\index{door.h@{door.h}!current\_obstruction\_state@{current\_obstruction\_state}}
+\index{current\_obstruction\_state@{current\_obstruction\_state}!door.h@{door.h}}
+\doxysubsubsection{\texorpdfstring{current\_obstruction\_state}{current\_obstruction\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}} current\+\_\+obstruction\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An instance of the door obstruction state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00026}{26}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+

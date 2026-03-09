@@ -1,6 +1,14 @@
+/**
+ * @file
+ * @brief Implementation of startup routine 
+ *
+ */
 #include "start_up.h"
 
-
+/**
+ * @brief Startup function that sends the elevator to floor 0, if not already there
+ * @param[in] floor Gives what floor we are on from a floor sensor
+ */
 void start_up(int floor){
     printf("%s\n", "Start up");
     

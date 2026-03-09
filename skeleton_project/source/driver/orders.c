@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Implemetation of handeling orders 
+ *
+ */
+
 #include "orders.h"
 
 
@@ -11,6 +17,14 @@ Order_State current_OUTSIDE0_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE1_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE2_ORDER_state = ORDER_OFF;
 Order_State current_OUTSIDE3_ORDER_state = ORDER_OFF;
+
+/**
+ * @brief Implementation of the function that handles orders
+ * @details A finite state machine for each button, that switches states based on given demands
+ * @param[in] floor Gives what floor we are on from a floor sensor
+ * @param[in] current_door_state Gives the current door state
+ * @param[in] current_obstruction_state Gives the current door obstruction state
+ */
 
 void setOrder(int floor, Door_State current_door_state, Obstruction_State current_obstruction_state){
 

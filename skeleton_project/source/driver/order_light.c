@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @brief Implementation of setting the order light 
+ *
+ */
+
+
 #include "order_light.h"
 
 Order_Light_State current_UP0_state = OFF;
@@ -14,6 +21,9 @@ Order_Light_State current_OUTSIDE3_state = OFF;
 
 //Lag en switch for hver order_light_state
 //Implementer at lyser fortsetter å lyse fram til orderen har blitt fullført
+/**
+ * @brief A functions that switches between order light on and off for each button  
+ */
 void setOrderLightState(void){
     switch(current_UP0_state){
     case OFF:

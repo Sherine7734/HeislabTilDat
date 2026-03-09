@@ -1,0 +1,51 @@
+\doxysection{source/driver/start\+\_\+up.h File Reference}
+\hypertarget{start__up_8h}{}\label{start__up_8h}\index{source/driver/start\_up.h@{source/driver/start\_up.h}}
+
+
+Declaration of startup function.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}elevio.\+h"{}}\newline
+{\ttfamily \#include "{}motor.\+h"{}}\newline
+Include dependency graph for start\+\_\+up.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{start__up_8h_ad76c85f036f3aac7ad89f0f44cd26ce2}{start\+\_\+up}} (int floor)
+\begin{DoxyCompactList}\small\item\em Startup function that sends the elevator to floor 0, if not already there. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of startup function. 
+
+
+
+Definition in file \mbox{\hyperlink{start__up_8h_source}{start\+\_\+up.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{start__up_8h_ad76c85f036f3aac7ad89f0f44cd26ce2}\label{start__up_8h_ad76c85f036f3aac7ad89f0f44cd26ce2} 
+\index{start\_up.h@{start\_up.h}!start\_up@{start\_up}}
+\index{start\_up@{start\_up}!start\_up.h@{start\_up.h}}
+\doxysubsubsection{\texorpdfstring{start\_up()}{start\_up()}}
+{\footnotesize\ttfamily void start\+\_\+up (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Startup function that sends the elevator to floor 0, if not already there. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em floor} & Gives what floor we are on from a floor sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{start__up_8c_source_l00012}{12}} of file \mbox{\hyperlink{start__up_8c_source}{start\+\_\+up.\+c}}.
+

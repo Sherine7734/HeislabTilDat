@@ -1,0 +1,27 @@
+\doxysection{motor.\+c}
+\hypertarget{motor_8c_source}{}\label{motor_8c_source}\index{source/driver/motor.c@{source/driver/motor.c}}
+\mbox{\hyperlink{motor_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{motor_8h}{motor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00009}\mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{00009}}\ \mbox{\hyperlink{motor_8h_a2cca3efd12d5414472a20a15bb556199}{OurMotorDirection}}\ \mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{current\_motor\_dir\_state}}\ =\ OUR\_DIRN\_DOWN;}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00015}00015\ \textcolor{comment}{//A\ function\ that\ chooses\ which\ motor\ direction\ state\ we\ are\ in}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00016}\mbox{\hyperlink{motor_8c_a1262f41f7d230dd37776a101f3bd0188}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{motor_8c_a1262f41f7d230dd37776a101f3bd0188}{motor\_dir\_state\_implementation}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{current\_motor\_dir\_state}})\{}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{case}\ OUR\_DIRN\_DOWN:}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}We're\ going\ down!:"{});}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{case}\ OUR\_DIRN\_STOP:}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}We're\ stopping!:"{});}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{case}\ OUR\_DIRN\_UP:}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}We're\ going\ up!:"{});}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_8c_source_l00030}00030\ \}}
+
+\end{DoxyCode}

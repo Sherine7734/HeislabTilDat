@@ -1,8 +1,17 @@
+/**
+ * @file
+ * @brief Implementation of which door state and door obstruction state we are in.
+ *
+ */
+
 #include "door.h"
 
 Door_State current_door_state = CLOSED;
 
 //A function that chooses which door state we are in
+/**
+ * @brief Turns the door light on if the door state is open and turns the door light off if the door state is closed
+ */
 void door_state_implementation(void){
     switch(current_door_state){
     case CLOSED:
@@ -15,6 +24,10 @@ void door_state_implementation(void){
 }
 
 Obstruction_State current_obstruction_state = NOTOBSTRUCT;
+
+/**
+ * @brief Chooses which door obstructions state we are in based on if the door is obstructed
+ */
 
 void door_obstruction(int floor){
     switch(current_obstruction_state){

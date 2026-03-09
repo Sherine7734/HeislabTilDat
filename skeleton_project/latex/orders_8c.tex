@@ -1,0 +1,218 @@
+\doxysection{source/driver/orders.c File Reference}
+\hypertarget{orders_8c}{}\label{orders_8c}\index{source/driver/orders.c@{source/driver/orders.c}}
+
+
+Implemetation of handeling orders.  
+
+
+{\ttfamily \#include "{}orders.\+h"{}}\newline
+Include dependency graph for orders.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{orders_8c_a7bfd7b55b20a5a19e0e95ced94ad45d9}{set\+Order}} (int floor, \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}} \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\+\_\+door\+\_\+state}}, \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}} \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\+\_\+obstruction\+\_\+state}})
+\begin{DoxyCompactList}\small\item\em Implementation of the function that handles orders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a1daca6994f597cd6c080683fa2938e21}{current\+\_\+\+UP0\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a9264edc65f819ba4ee8430862cb4b7c8}{current\+\_\+\+UP1\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a7e65f91a8588565a5690c9f22bfd9ab2}{current\+\_\+\+DOWN1\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_ae491a6cf511dc990b64f98f4062e2c96}{current\+\_\+\+UP2\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a392b90f8af70b49ad22ea288173c635c}{current\+\_\+\+DOWN2\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_aa9a6256c3343322245946891adcfa127}{current\+\_\+\+DOWN3\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a4266e9e2b06ccbfcddd559e363ef25f5}{current\+\_\+\+OUTSIDE0\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a74c12369c614bcc5f46dbe39fdc71137}{current\+\_\+\+OUTSIDE1\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a5125c9136d26098b49ba9f9f47b1389b}{current\+\_\+\+OUTSIDE2\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} \mbox{\hyperlink{orders_8c_a6d5739e30f155e1d66e1a0b304e483db}{current\+\_\+\+OUTSIDE3\+\_\+\+ORDER\+\_\+state}} = ORDER\+\_\+\+OFF
+\begin{DoxyCompactList}\small\item\em Instance of the order state, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implemetation of handeling orders. 
+
+
+
+Definition in file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{orders_8c_a7bfd7b55b20a5a19e0e95ced94ad45d9}\label{orders_8c_a7bfd7b55b20a5a19e0e95ced94ad45d9} 
+\index{orders.c@{orders.c}!setOrder@{setOrder}}
+\index{setOrder@{setOrder}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{setOrder()}{setOrder()}}
+{\footnotesize\ttfamily void set\+Order (\begin{DoxyParamCaption}\item[{int}]{floor,  }\item[{\mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}}}]{current\+\_\+door\+\_\+state,  }\item[{\mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}}}]{current\+\_\+obstruction\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Implementation of the function that handles orders. 
+
+Declaration of function that sets the order.
+
+A finite state machine for each button, that switches states based on given demands 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em floor} & Gives what floor we are on from a floor sensor \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+door\+\_\+state} & Gives the current door state \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+obstruction\+\_\+state} & Gives the current door obstruction state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00029}{29}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{orders_8c_a7e65f91a8588565a5690c9f22bfd9ab2}\label{orders_8c_a7e65f91a8588565a5690c9f22bfd9ab2} 
+\index{orders.c@{orders.c}!current\_DOWN1\_ORDER\_state@{current\_DOWN1\_ORDER\_state}}
+\index{current\_DOWN1\_ORDER\_state@{current\_DOWN1\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN1\_ORDER\_state}{current\_DOWN1\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+DOWN1\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00012}{12}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a392b90f8af70b49ad22ea288173c635c}\label{orders_8c_a392b90f8af70b49ad22ea288173c635c} 
+\index{orders.c@{orders.c}!current\_DOWN2\_ORDER\_state@{current\_DOWN2\_ORDER\_state}}
+\index{current\_DOWN2\_ORDER\_state@{current\_DOWN2\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN2\_ORDER\_state}{current\_DOWN2\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+DOWN2\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00014}{14}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_aa9a6256c3343322245946891adcfa127}\label{orders_8c_aa9a6256c3343322245946891adcfa127} 
+\index{orders.c@{orders.c}!current\_DOWN3\_ORDER\_state@{current\_DOWN3\_ORDER\_state}}
+\index{current\_DOWN3\_ORDER\_state@{current\_DOWN3\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN3\_ORDER\_state}{current\_DOWN3\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+DOWN3\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00015}{15}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a4266e9e2b06ccbfcddd559e363ef25f5}\label{orders_8c_a4266e9e2b06ccbfcddd559e363ef25f5} 
+\index{orders.c@{orders.c}!current\_OUTSIDE0\_ORDER\_state@{current\_OUTSIDE0\_ORDER\_state}}
+\index{current\_OUTSIDE0\_ORDER\_state@{current\_OUTSIDE0\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE0\_ORDER\_state}{current\_OUTSIDE0\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+OUTSIDE0\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00016}{16}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a74c12369c614bcc5f46dbe39fdc71137}\label{orders_8c_a74c12369c614bcc5f46dbe39fdc71137} 
+\index{orders.c@{orders.c}!current\_OUTSIDE1\_ORDER\_state@{current\_OUTSIDE1\_ORDER\_state}}
+\index{current\_OUTSIDE1\_ORDER\_state@{current\_OUTSIDE1\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE1\_ORDER\_state}{current\_OUTSIDE1\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+OUTSIDE1\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00017}{17}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a5125c9136d26098b49ba9f9f47b1389b}\label{orders_8c_a5125c9136d26098b49ba9f9f47b1389b} 
+\index{orders.c@{orders.c}!current\_OUTSIDE2\_ORDER\_state@{current\_OUTSIDE2\_ORDER\_state}}
+\index{current\_OUTSIDE2\_ORDER\_state@{current\_OUTSIDE2\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE2\_ORDER\_state}{current\_OUTSIDE2\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+OUTSIDE2\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00018}{18}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a6d5739e30f155e1d66e1a0b304e483db}\label{orders_8c_a6d5739e30f155e1d66e1a0b304e483db} 
+\index{orders.c@{orders.c}!current\_OUTSIDE3\_ORDER\_state@{current\_OUTSIDE3\_ORDER\_state}}
+\index{current\_OUTSIDE3\_ORDER\_state@{current\_OUTSIDE3\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE3\_ORDER\_state}{current\_OUTSIDE3\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+OUTSIDE3\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00019}{19}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a1daca6994f597cd6c080683fa2938e21}\label{orders_8c_a1daca6994f597cd6c080683fa2938e21} 
+\index{orders.c@{orders.c}!current\_UP0\_ORDER\_state@{current\_UP0\_ORDER\_state}}
+\index{current\_UP0\_ORDER\_state@{current\_UP0\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_UP0\_ORDER\_state}{current\_UP0\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+UP0\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00010}{10}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_a9264edc65f819ba4ee8430862cb4b7c8}\label{orders_8c_a9264edc65f819ba4ee8430862cb4b7c8} 
+\index{orders.c@{orders.c}!current\_UP1\_ORDER\_state@{current\_UP1\_ORDER\_state}}
+\index{current\_UP1\_ORDER\_state@{current\_UP1\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_UP1\_ORDER\_state}{current\_UP1\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+UP1\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00011}{11}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+
+\Hypertarget{orders_8c_ae491a6cf511dc990b64f98f4062e2c96}\label{orders_8c_ae491a6cf511dc990b64f98f4062e2c96} 
+\index{orders.c@{orders.c}!current\_UP2\_ORDER\_state@{current\_UP2\_ORDER\_state}}
+\index{current\_UP2\_ORDER\_state@{current\_UP2\_ORDER\_state}!orders.c@{orders.c}}
+\doxysubsubsection{\texorpdfstring{current\_UP2\_ORDER\_state}{current\_UP2\_ORDER\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{orders_8h_af14e7a8fe47bbcf7a210e1f5a27d1ae6}{Order\+\_\+\+State}} current\+\_\+\+UP2\+\_\+\+ORDER\+\_\+state = ORDER\+\_\+\+OFF}
+
+
+
+Instance of the order state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{orders_8c_source_l00013}{13}} of file \mbox{\hyperlink{orders_8c_source}{orders.\+c}}.
+

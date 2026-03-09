@@ -1,0 +1,94 @@
+\doxysection{source/driver/motor.h File Reference}
+\hypertarget{motor_8h}{}\label{motor_8h}\index{source/driver/motor.h@{source/driver/motor.h}}
+
+
+Declares a function, an enum and makes an instance that follows the motor direction.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}elevio.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for motor.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{motor_8h_a2cca3efd12d5414472a20a15bb556199}{Our\+Motor\+Direction}} \{ {\bfseries OUR\+\_\+\+DIRN\+\_\+\+DOWN} = -\/1
+, {\bfseries OUR\+\_\+\+DIRN\+\_\+\+STOP} = 0
+, {\bfseries OUR\+\_\+\+DIRN\+\_\+\+UP} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em An enum of the motor driection states\+: motor direction down,stop and up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{motor_8h_a1262f41f7d230dd37776a101f3bd0188}{motor\+\_\+dir\+\_\+state\+\_\+implementation}} (void)
+\begin{DoxyCompactList}\small\item\em Declaration of our function that follows the motor direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{motor_8h_a2cca3efd12d5414472a20a15bb556199}{Our\+Motor\+Direction}} \mbox{\hyperlink{motor_8h_a2908af1720f465114afb4c87ba3144b4}{current\+\_\+motor\+\_\+dir\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em An instance of our enum of motor direction states, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares a function, an enum and makes an instance that follows the motor direction. 
+
+
+
+Definition in file \mbox{\hyperlink{motor_8h_source}{motor.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{motor_8h_a2cca3efd12d5414472a20a15bb556199}\label{motor_8h_a2cca3efd12d5414472a20a15bb556199} 
+\index{motor.h@{motor.h}!OurMotorDirection@{OurMotorDirection}}
+\index{OurMotorDirection@{OurMotorDirection}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{OurMotorDirection}{OurMotorDirection}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{motor_8h_a2cca3efd12d5414472a20a15bb556199}{Our\+Motor\+Direction}}}
+
+
+
+An enum of the motor driection states\+: motor direction down,stop and up. 
+
+
+
+Definition at line \mbox{\hyperlink{motor_8h_source_l00017}{17}} of file \mbox{\hyperlink{motor_8h_source}{motor.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{motor_8h_a1262f41f7d230dd37776a101f3bd0188}\label{motor_8h_a1262f41f7d230dd37776a101f3bd0188} 
+\index{motor.h@{motor.h}!motor\_dir\_state\_implementation@{motor\_dir\_state\_implementation}}
+\index{motor\_dir\_state\_implementation@{motor\_dir\_state\_implementation}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{motor\_dir\_state\_implementation()}{motor\_dir\_state\_implementation()}}
+{\footnotesize\ttfamily void motor\+\_\+dir\+\_\+state\+\_\+implementation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Declaration of our function that follows the motor direction. 
+
+Declaration of our function that follows the motor direction. 
+
+Definition at line \mbox{\hyperlink{motor_8c_source_l00016}{16}} of file \mbox{\hyperlink{motor_8c_source}{motor.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{motor_8h_a2908af1720f465114afb4c87ba3144b4}\label{motor_8h_a2908af1720f465114afb4c87ba3144b4} 
+\index{motor.h@{motor.h}!current\_motor\_dir\_state@{current\_motor\_dir\_state}}
+\index{current\_motor\_dir\_state@{current\_motor\_dir\_state}!motor.h@{motor.h}}
+\doxysubsubsection{\texorpdfstring{current\_motor\_dir\_state}{current\_motor\_dir\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{motor_8h_a2cca3efd12d5414472a20a15bb556199}{Our\+Motor\+Direction}} current\+\_\+motor\+\_\+dir\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An instance of our enum of motor direction states, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{motor_8c_source_l00009}{9}} of file \mbox{\hyperlink{motor_8c_source}{motor.\+c}}.
+

@@ -1,0 +1,77 @@
+\doxysection{stop\+\_\+button.\+c}
+\hypertarget{stop__button_8c_source}{}\label{stop__button_8c_source}\index{source/driver/stop\_button.c@{source/driver/stop\_button.c}}
+\mbox{\hyperlink{stop__button_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stop__button_8h}{stop\_button.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00011}\mbox{\hyperlink{stop__button_8c_a993ef31b7dd65fefaf7f8d498bfd9ef2}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stop__button_8c_a993ef31b7dd65fefaf7f8d498bfd9ef2}{activate\_stop\_light}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (elevio\_stopButton()\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}Stop\ lamp\ on"{});}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ elevio\_stopLamp(1);}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00015}00015\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (elevio\_stopButton()\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}Stop\ lamp\ off"{});}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ elevio\_stopLamp(0);}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00025}\mbox{\hyperlink{stop__button_8c_acf501387b8254d478a841ddb42b5ddfe}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stop__button_8c_acf501387b8254d478a841ddb42b5ddfe}{open\_door\_when\_stop}}(\textcolor{keywordtype}{int}\ floor)\{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ ((floor\ !=\ -\/1)\ \&\&\ (elevio\_stopButton()\ ==\ 1))\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ OPEN;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00031}\mbox{\hyperlink{stop__button_8c_a47be33cf1d26928f18e98736c4b42a2c}{00031}}\ \mbox{\hyperlink{stop__button_8h_adceee35026b8185d26a364f222529360}{Stop\_Button\_State}}\ \mbox{\hyperlink{stop__button_8c_a47be33cf1d26928f18e98736c4b42a2c}{current\_stop\_button\_state}}\ \ =\ STOP0;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00037}\mbox{\hyperlink{stop__button_8c_ab3366e1f5812976eee357214c0c0a4ac}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stop__button_8c_ab3366e1f5812976eee357214c0c0a4ac}{keep\_door\_open\_when\_not\_stop}}(\textcolor{keywordtype}{int}\ floor)\{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{stop__button_8c_a47be33cf1d26928f18e98736c4b42a2c}{current\_stop\_button\_state}})\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{case}\ STOP0:}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}In\ STOP0"{});}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (elevio\_stopButton()==1)\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{stop__button_8c_a47be33cf1d26928f18e98736c4b42a2c}{current\_stop\_button\_state}}=STOP1;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{case}\ STOP1:}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//printf("{}\%s\(\backslash\)n"{},\ "{}In\ STOP1"{});}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ elevio\_motorDirection(DIRN\_STOP);}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{motor_8c_a2908af1720f465114afb4c87ba3144b4}{current\_motor\_dir\_state}}\ =\ OUR\_DIRN\_STOP;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a1daca6994f597cd6c080683fa2938e21}{current\_UP0\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a9264edc65f819ba4ee8430862cb4b7c8}{current\_UP1\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a7e65f91a8588565a5690c9f22bfd9ab2}{current\_DOWN1\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_ae491a6cf511dc990b64f98f4062e2c96}{current\_UP2\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a392b90f8af70b49ad22ea288173c635c}{current\_DOWN2\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_aa9a6256c3343322245946891adcfa127}{current\_DOWN3\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a4266e9e2b06ccbfcddd559e363ef25f5}{current\_OUTSIDE0\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a74c12369c614bcc5f46dbe39fdc71137}{current\_OUTSIDE1\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a5125c9136d26098b49ba9f9f47b1389b}{current\_OUTSIDE2\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{orders_8c_a6d5739e30f155e1d66e1a0b304e483db}{current\_OUTSIDE3\_ORDER\_state}}\ =\ ORDER\_OFF;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((elevio\_stopButton()==0)\ \ \&\&\ (floor\ !=\ -\/1))\{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}Timer\ has\ started"{}});}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ OPEN;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ sleep(3);}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ CLOSED;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//fix\ direction\ after\ stop}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}Timer\ has\ ended"{}});}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{stop__button_8c_a47be33cf1d26928f18e98736c4b42a2c}{current\_stop\_button\_state}}=STOP0;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (floor\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ CLOSED;}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00080}00080\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00081}00081\ \textcolor{comment}{if(elevio\_stopButton())\{}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ elevio\_motorDirection(DIRN\_STOP);}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ activate\_stop\_light();\}}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00084}00084\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stop__button_8c_source_l00085}00085\ \textcolor{comment}{*/}}
+
+\end{DoxyCode}

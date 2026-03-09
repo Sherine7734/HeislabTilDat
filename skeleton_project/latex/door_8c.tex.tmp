@@ -1,0 +1,95 @@
+\doxysection{source/driver/door.c File Reference}
+\hypertarget{door_8c}{}\label{door_8c}\index{source/driver/door.c@{source/driver/door.c}}
+
+
+Implementation of which door state and door obstruction state we are in.  
+
+
+{\ttfamily \#include "{}door.\+h"{}}\newline
+Include dependency graph for door.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{door_8c_a449cc1f0995b223f24be41f40aa000f8}{door\+\_\+state\+\_\+implementation}} (void)
+\begin{DoxyCompactList}\small\item\em Turns the door light on if the door state is open and turns the door light off if the door state is closed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{door_8c_a3195de0db68c687a2dafbd5cae109688}{door\+\_\+obstruction}} (int floor)
+\begin{DoxyCompactList}\small\item\em Chooses which door obstructions state we are in based on if the door is obstructed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}} \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\+\_\+door\+\_\+state}} = CLOSED
+\begin{DoxyCompactList}\small\item\em An instance of the door state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}} \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\+\_\+obstruction\+\_\+state}} = NOTOBSTRUCT
+\begin{DoxyCompactList}\small\item\em An instance of the door obstruction state, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of which door state and door obstruction state we are in. 
+
+
+
+Definition in file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{door_8c_a3195de0db68c687a2dafbd5cae109688}\label{door_8c_a3195de0db68c687a2dafbd5cae109688} 
+\index{door.c@{door.c}!door\_obstruction@{door\_obstruction}}
+\index{door\_obstruction@{door\_obstruction}!door.c@{door.c}}
+\doxysubsubsection{\texorpdfstring{door\_obstruction()}{door\_obstruction()}}
+{\footnotesize\ttfamily void door\+\_\+obstruction (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Chooses which door obstructions state we are in based on if the door is obstructed. 
+
+Declatration of the door state obstruction function. 
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00032}{32}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+\Hypertarget{door_8c_a449cc1f0995b223f24be41f40aa000f8}\label{door_8c_a449cc1f0995b223f24be41f40aa000f8} 
+\index{door.c@{door.c}!door\_state\_implementation@{door\_state\_implementation}}
+\index{door\_state\_implementation@{door\_state\_implementation}!door.c@{door.c}}
+\doxysubsubsection{\texorpdfstring{door\_state\_implementation()}{door\_state\_implementation()}}
+{\footnotesize\ttfamily void door\+\_\+state\+\_\+implementation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turns the door light on if the door state is open and turns the door light off if the door state is closed. 
+
+Declaration of the door state function. 
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00015}{15}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{door_8c_aca10366a6e8097f2cc35846fca0be956}\label{door_8c_aca10366a6e8097f2cc35846fca0be956} 
+\index{door.c@{door.c}!current\_door\_state@{current\_door\_state}}
+\index{current\_door\_state@{current\_door\_state}!door.c@{door.c}}
+\doxysubsubsection{\texorpdfstring{current\_door\_state}{current\_door\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\+\_\+\+State}} current\+\_\+door\+\_\+state = CLOSED}
+
+
+
+An instance of the door state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00009}{9}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+
+\Hypertarget{door_8c_a9e38ccfb190819408dc3ec55f84fba56}\label{door_8c_a9e38ccfb190819408dc3ec55f84fba56} 
+\index{door.c@{door.c}!current\_obstruction\_state@{current\_obstruction\_state}}
+\index{current\_obstruction\_state@{current\_obstruction\_state}!door.c@{door.c}}
+\doxysubsubsection{\texorpdfstring{current\_obstruction\_state}{current\_obstruction\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\+\_\+\+State}} current\+\_\+obstruction\+\_\+state = NOTOBSTRUCT}
+
+
+
+An instance of the door obstruction state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{door_8c_source_l00026}{26}} of file \mbox{\hyperlink{door_8c_source}{door.\+c}}.
+

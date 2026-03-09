@@ -1,0 +1,46 @@
+\doxysection{door.\+c}
+\hypertarget{door_8c_source}{}\label{door_8c_source}\index{source/driver/door.c@{source/driver/door.c}}
+\mbox{\hyperlink{door_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{door_8h}{door.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00009}\mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{00009}}\ \mbox{\hyperlink{door_8h_a977c3664a40f5a72c93d5afc647f54fa}{Door\_State}}\ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ CLOSED;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00011}00011\ \textcolor{comment}{//A\ function\ that\ chooses\ which\ door\ state\ we\ are\ in}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00015}\mbox{\hyperlink{door_8c_a449cc1f0995b223f24be41f40aa000f8}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{door_8c_a449cc1f0995b223f24be41f40aa000f8}{door\_state\_implementation}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}})\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{case}\ CLOSED:}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00018}00018\ \ \ \ \ elevio\_doorOpenLamp(0);}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{case}\ OPEN:}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00021}00021\ \ \ \ \ elevio\_doorOpenLamp(1);}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00026}\mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{00026}}\ \mbox{\hyperlink{door_8h_ade6a10a4a9c4763581986af376e4587b}{Obstruction\_State}}\ \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}}\ =\ NOTOBSTRUCT;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00032}\mbox{\hyperlink{door_8c_a3195de0db68c687a2dafbd5cae109688}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{door_8c_a3195de0db68c687a2dafbd5cae109688}{door\_obstruction}}(\textcolor{keywordtype}{int}\ floor)\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}})\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{case}\ NOTOBSTRUCT:}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (elevio\_obstruction()\ ==\ 1)\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}}\ =\ OBSTRUCT;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{case}\ OBSTRUCT:}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (elevio\_obstruction()\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ ==\ OPEN)\{}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ sleep(3);}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_aca10366a6e8097f2cc35846fca0be956}{current\_door\_state}}\ =\ CLOSED;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}}\ =\ NOTOBSTRUCT;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{door_8c_a9e38ccfb190819408dc3ec55f84fba56}{current\_obstruction\_state}}\ =\ NOTOBSTRUCT;}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{door_8c_source_l00052}00052\ \}}
+
+\end{DoxyCode}

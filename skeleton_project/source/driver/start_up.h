@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Declaration of startup function
+ *
+ */
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>

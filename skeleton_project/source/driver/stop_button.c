@@ -1,6 +1,13 @@
+/**
+ * @file
+ * @brief Implementation of stoplight, open door when elevator is stopped and keep door open when not stopped after stop for stopbutton
+ *
+ */
 #include "stop_button.h"
 
-
+/**
+ * @brief Turns stop light on if the stopbutton is pressed, and turns the stop light off if stop button is not pressed
+ */
 void activate_stop_light(void) {
     if (elevio_stopButton() == 1) {
         //printf("%s\n", "Stop lamp on");
@@ -12,6 +19,9 @@ void activate_stop_light(void) {
     }
 }
 
+/**
+ * @brief Opens the door if the stopbutton is pressed while in a floor
+ */
 void open_door_when_stop(int floor){
     if ((floor != -1) && (elevio_stopButton() == 1)) {
         current_door_state = OPEN;
@@ -20,6 +30,10 @@ void open_door_when_stop(int floor){
 
 Stop_Button_State current_stop_button_state  = STOP0;
 
+/**
+ * @brief Switches between the stopbutton states, deletes orders after pressed and keeps door open for three seconds after released if we are in a floor
+ * @param[in] floor Gives what floor we are on from a floor sensor
+ */
 void keep_door_open_when_not_stop(int floor){
     
 

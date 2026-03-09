@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Our main file that runs the simulation
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
@@ -15,6 +20,9 @@
 //When two orders want separate motor dir, we prioritize down. 
 //
 
+/**
+ * @brief The main function containing the startup function and then all of our other functions in a continous loop
+ */
 int main(){
     elevio_init();
     

@@ -1,0 +1,31 @@
+\doxysection{order\+\_\+light.\+h}
+\hypertarget{order__light_8h_source}{}\label{order__light_8h_source}\index{source/driver/order\_light.h@{source/driver/order\_light.h}}
+\mbox{\hyperlink{order__light_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00007}00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}elevio.h"{}}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00017}\mbox{\hyperlink{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}{00017}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}{order\_light\_state}}\ \{}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00018}00018\ \ \ \ \ OFF,\ ON}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00019}\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{00019}}\ \}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a71a317b04ba46af687dd2a429b894742}{current\_UP0\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00028}00028\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_afcdd0b04d81bc7766ac38964c0ab3b4c}{current\_UP1\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00032}00032\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_ad0edc83fe8218505609cb6f7b4eff940}{current\_DOWN1\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00036}00036\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a0cd2502b4d96261d603aa9649a23fce3}{current\_UP2\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00040}00040\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_ac0d794e0ec0dce8691d666d3b794bedc}{current\_DOWN2\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00044}00044\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a7aa92d3c748307d6a3803e124af0b709}{current\_DOWN3\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00049}00049\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_abb69f7c9bcc66c87c6e1575f2bef5505}{current\_OUTSIDE0\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00053}00053\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a03137945ec0b992328a5321b50e6f6ce}{current\_OUTSIDE1\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00057}00057\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a34bc3583f68f7eb43d97c570ffc4cae4}{current\_OUTSIDE2\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00061}00061\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\_Light\_State}}\ \mbox{\hyperlink{order__light_8h_a859e301c0701ab954f461fedef21d9ed}{current\_OUTSIDE3\_state}};}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00066}00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order__light_8h_a49cdd12f411be128dc5942be6957398c}{setOrderLightState}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{order__light_8h_source_l00067}00067\ }
+
+\end{DoxyCode}

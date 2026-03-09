@@ -1,6 +1,16 @@
+/**
+ * @file
+ * @brief Sets floorlight to the correct floor.
+ *
+ */
+
 #include "floor_light.h"
 
-
+/**
+ * @brief Checks what floor we are on, and if we are in the same floor as the indicator the floorlight turns on
+ * 
+ * @param[in] floor Gives what floor we are on from a floor sensor
+ */
 
 void setFloorLight(int floor){
     if (floor == 0) {
@@ -20,53 +30,3 @@ void setFloorLight(int floor){
     }
 }
 
-/**
- * 
- * 
-        //State
-    typedef enum floor_light {
-        FL0, FL1, FL2, FL3
-    } Floor_light;
-
-    Floor_light current_floor_light;
-
-    Floor_light current_floor_light;
-    switch(current_floor_light) {
-    
-    case FL0:
-        elevio_floorIndicator(0);
-        printf("Floor light 0 i on");
-        if (elevio_floorSensor() == 1){
-            current_floor_light = FL1;
-        }
-        break;
-    case FL1:
-        elevio_floorIndicator(1);
-        printf("Floor light 1 i on");
-        if (elevio_floorSensor() == 0){
-            current_floor_light = FL0;
-        }
-        if (elevio_floorSensor() == 2){
-            current_floor_light = FL2;
-        }
-        break;
-    case FL2:
-        elevio_floorIndicator(2);
-        printf("Floor light 2 i on");
-        if (elevio_floorSensor() == 1){
-            current_floor_light = FL1;
-        }
-        if (elevio_floorSensor() == 3){
-            current_floor_light = FL3;
-        }
-        break;
-    case FL3:
-        elevio_floorIndicator(3);
-        printf("Floor light 3 i on");
-        if (elevio_floorSensor() == 2){
-            current_floor_light = FL2;
-        }
-        break;
-    
-    }
-*/

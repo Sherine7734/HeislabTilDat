@@ -1,0 +1,139 @@
+\doxysection{source/driver/stop\+\_\+button.h File Reference}
+\hypertarget{stop__button_8h}{}\label{stop__button_8h}\index{source/driver/stop\_button.h@{source/driver/stop\_button.h}}
+
+
+Declaration for functions realted to the stop button, an enum of the stopbutton states and an instance of the enum.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}elevio.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}door.\+h"{}}\newline
+{\ttfamily \#include "{}motor.\+h"{}}\newline
+{\ttfamily \#include "{}orders.\+h"{}}\newline
+Include dependency graph for stop\+\_\+button.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{stop__button_8h_adceee35026b8185d26a364f222529360}\label{stop__button_8h_adceee35026b8185d26a364f222529360} 
+typedef enum \mbox{\hyperlink{stop__button_8h_a33991fec922cd18ac89264fc9b775143}{stop\+\_\+button\+\_\+state}} {\bfseries Stop\+\_\+\+Button\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em An enum for the stop button states\+: not pressed (STOP0) and pressed (STOP1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{stop__button_8h_a33991fec922cd18ac89264fc9b775143}{stop\+\_\+button\+\_\+state}} \{ {\bfseries STOP0}
+, {\bfseries STOP1}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum for the stop button states\+: not pressed (STOP0) and pressed (STOP1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stop__button_8h_a993ef31b7dd65fefaf7f8d498bfd9ef2}{activate\+\_\+stop\+\_\+light}} (void)
+\begin{DoxyCompactList}\small\item\em Turns stop light on if the stopbutton is pressed, and turns the stop light off if stop button is not pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stop__button_8h_acf501387b8254d478a841ddb42b5ddfe}{open\+\_\+door\+\_\+when\+\_\+stop}} (int floor)
+\begin{DoxyCompactList}\small\item\em Opens the door if the stopbutton is pressed while in a floor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stop__button_8h_ab3366e1f5812976eee357214c0c0a4ac}{keep\+\_\+door\+\_\+open\+\_\+when\+\_\+not\+\_\+stop}} (int floor)
+\begin{DoxyCompactList}\small\item\em Switches between the stopbutton states, deletes orders after pressed and keeps door open for three seconds after released if we are in a floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stop__button_8h_adceee35026b8185d26a364f222529360}{Stop\+\_\+\+Button\+\_\+\+State}} \mbox{\hyperlink{stop__button_8h_a47be33cf1d26928f18e98736c4b42a2c}{current\+\_\+stop\+\_\+button\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em An instance of the stop button enum, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration for functions realted to the stop button, an enum of the stopbutton states and an instance of the enum. 
+
+
+
+Definition in file \mbox{\hyperlink{stop__button_8h_source}{stop\+\_\+button.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{stop__button_8h_a33991fec922cd18ac89264fc9b775143}\label{stop__button_8h_a33991fec922cd18ac89264fc9b775143} 
+\index{stop\_button.h@{stop\_button.h}!stop\_button\_state@{stop\_button\_state}}
+\index{stop\_button\_state@{stop\_button\_state}!stop\_button.h@{stop\_button.h}}
+\doxysubsubsection{\texorpdfstring{stop\_button\_state}{stop\_button\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{stop__button_8h_a33991fec922cd18ac89264fc9b775143}{stop\+\_\+button\+\_\+state}}}
+
+
+
+An enum for the stop button states\+: not pressed (STOP0) and pressed (STOP1) 
+
+
+
+Definition at line \mbox{\hyperlink{stop__button_8h_source_l00024}{24}} of file \mbox{\hyperlink{stop__button_8h_source}{stop\+\_\+button.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{stop__button_8h_a993ef31b7dd65fefaf7f8d498bfd9ef2}\label{stop__button_8h_a993ef31b7dd65fefaf7f8d498bfd9ef2} 
+\index{stop\_button.h@{stop\_button.h}!activate\_stop\_light@{activate\_stop\_light}}
+\index{activate\_stop\_light@{activate\_stop\_light}!stop\_button.h@{stop\_button.h}}
+\doxysubsubsection{\texorpdfstring{activate\_stop\_light()}{activate\_stop\_light()}}
+{\footnotesize\ttfamily void activate\+\_\+stop\+\_\+light (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turns stop light on if the stopbutton is pressed, and turns the stop light off if stop button is not pressed. 
+
+
+
+Definition at line \mbox{\hyperlink{stop__button_8c_source_l00011}{11}} of file \mbox{\hyperlink{stop__button_8c_source}{stop\+\_\+button.\+c}}.
+
+\Hypertarget{stop__button_8h_ab3366e1f5812976eee357214c0c0a4ac}\label{stop__button_8h_ab3366e1f5812976eee357214c0c0a4ac} 
+\index{stop\_button.h@{stop\_button.h}!keep\_door\_open\_when\_not\_stop@{keep\_door\_open\_when\_not\_stop}}
+\index{keep\_door\_open\_when\_not\_stop@{keep\_door\_open\_when\_not\_stop}!stop\_button.h@{stop\_button.h}}
+\doxysubsubsection{\texorpdfstring{keep\_door\_open\_when\_not\_stop()}{keep\_door\_open\_when\_not\_stop()}}
+{\footnotesize\ttfamily void keep\+\_\+door\+\_\+open\+\_\+when\+\_\+not\+\_\+stop (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Switches between the stopbutton states, deletes orders after pressed and keeps door open for three seconds after released if we are in a floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em floor} & Gives what floor we are on from a floor sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{stop__button_8c_source_l00037}{37}} of file \mbox{\hyperlink{stop__button_8c_source}{stop\+\_\+button.\+c}}.
+
+\Hypertarget{stop__button_8h_acf501387b8254d478a841ddb42b5ddfe}\label{stop__button_8h_acf501387b8254d478a841ddb42b5ddfe} 
+\index{stop\_button.h@{stop\_button.h}!open\_door\_when\_stop@{open\_door\_when\_stop}}
+\index{open\_door\_when\_stop@{open\_door\_when\_stop}!stop\_button.h@{stop\_button.h}}
+\doxysubsubsection{\texorpdfstring{open\_door\_when\_stop()}{open\_door\_when\_stop()}}
+{\footnotesize\ttfamily void open\+\_\+door\+\_\+when\+\_\+stop (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Opens the door if the stopbutton is pressed while in a floor. 
+
+
+
+Definition at line \mbox{\hyperlink{stop__button_8c_source_l00025}{25}} of file \mbox{\hyperlink{stop__button_8c_source}{stop\+\_\+button.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{stop__button_8h_a47be33cf1d26928f18e98736c4b42a2c}\label{stop__button_8h_a47be33cf1d26928f18e98736c4b42a2c} 
+\index{stop\_button.h@{stop\_button.h}!current\_stop\_button\_state@{current\_stop\_button\_state}}
+\index{current\_stop\_button\_state@{current\_stop\_button\_state}!stop\_button.h@{stop\_button.h}}
+\doxysubsubsection{\texorpdfstring{current\_stop\_button\_state}{current\_stop\_button\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stop__button_8h_adceee35026b8185d26a364f222529360}{Stop\+\_\+\+Button\+\_\+\+State}} current\+\_\+stop\+\_\+button\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An instance of the stop button enum, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{stop__button_8c_source_l00031}{31}} of file \mbox{\hyperlink{stop__button_8c_source}{stop\+\_\+button.\+c}}.
+

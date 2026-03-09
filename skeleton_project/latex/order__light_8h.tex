@@ -1,0 +1,243 @@
+\doxysection{source/driver/order\+\_\+light.h File Reference}
+\hypertarget{order__light_8h}{}\label{order__light_8h}\index{source/driver/order\_light.h@{source/driver/order\_light.h}}
+
+
+A function and an enum for the order light state, and an instance for each button.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}elevio.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for order\+\_\+light.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{order__light_8h_a041834856ee9d684f6062774ae509ffb}\label{order__light_8h_a041834856ee9d684f6062774ae509ffb} 
+typedef enum \mbox{\hyperlink{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}{order\+\_\+light\+\_\+state}} {\bfseries Order\+\_\+\+Light\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em An enum of the orderlight states\+:off and on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}{order\+\_\+light\+\_\+state}} \{ {\bfseries OFF}
+, {\bfseries ON}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum of the orderlight states\+:off and on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{order__light_8h_a49cdd12f411be128dc5942be6957398c}{set\+Order\+Light\+State}} (void)
+\begin{DoxyCompactList}\small\item\em Declaration of the function that set the order light state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a71a317b04ba46af687dd2a429b894742}{current\+\_\+\+UP0\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_afcdd0b04d81bc7766ac38964c0ab3b4c}{current\+\_\+\+UP1\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_ad0edc83fe8218505609cb6f7b4eff940}{current\+\_\+\+DOWN1\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a0cd2502b4d96261d603aa9649a23fce3}{current\+\_\+\+UP2\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_ac0d794e0ec0dce8691d666d3b794bedc}{current\+\_\+\+DOWN2\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a7aa92d3c748307d6a3803e124af0b709}{current\+\_\+\+DOWN3\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_abb69f7c9bcc66c87c6e1575f2bef5505}{current\+\_\+\+OUTSIDE0\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a03137945ec0b992328a5321b50e6f6ce}{current\+\_\+\+OUTSIDE1\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a34bc3583f68f7eb43d97c570ffc4cae4}{current\+\_\+\+OUTSIDE2\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} \mbox{\hyperlink{order__light_8h_a859e301c0701ab954f461fedef21d9ed}{current\+\_\+\+OUTSIDE3\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Instance of the orderlight state, giving the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function and an enum for the order light state, and an instance for each button. 
+
+
+
+Definition in file \mbox{\hyperlink{order__light_8h_source}{order\+\_\+light.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}\label{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5} 
+\index{order\_light.h@{order\_light.h}!order\_light\_state@{order\_light\_state}}
+\index{order\_light\_state@{order\_light\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{order\_light\_state}{order\_light\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{order__light_8h_a1bfaac2cd827316c65aea2ed713b03c5}{order\+\_\+light\+\_\+state}}}
+
+
+
+An enum of the orderlight states\+:off and on. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8h_source_l00017}{17}} of file \mbox{\hyperlink{order__light_8h_source}{order\+\_\+light.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{order__light_8h_a49cdd12f411be128dc5942be6957398c}\label{order__light_8h_a49cdd12f411be128dc5942be6957398c} 
+\index{order\_light.h@{order\_light.h}!setOrderLightState@{setOrderLightState}}
+\index{setOrderLightState@{setOrderLightState}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{setOrderLightState()}{setOrderLightState()}}
+{\footnotesize\ttfamily void set\+Order\+Light\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Declaration of the function that set the order light state. 
+
+Declaration of the function that set the order light state. 
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00027}{27}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{order__light_8h_ad0edc83fe8218505609cb6f7b4eff940}\label{order__light_8h_ad0edc83fe8218505609cb6f7b4eff940} 
+\index{order\_light.h@{order\_light.h}!current\_DOWN1\_state@{current\_DOWN1\_state}}
+\index{current\_DOWN1\_state@{current\_DOWN1\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN1\_state}{current\_DOWN1\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+DOWN1\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00012}{12}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_ac0d794e0ec0dce8691d666d3b794bedc}\label{order__light_8h_ac0d794e0ec0dce8691d666d3b794bedc} 
+\index{order\_light.h@{order\_light.h}!current\_DOWN2\_state@{current\_DOWN2\_state}}
+\index{current\_DOWN2\_state@{current\_DOWN2\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN2\_state}{current\_DOWN2\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+DOWN2\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00014}{14}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a7aa92d3c748307d6a3803e124af0b709}\label{order__light_8h_a7aa92d3c748307d6a3803e124af0b709} 
+\index{order\_light.h@{order\_light.h}!current\_DOWN3\_state@{current\_DOWN3\_state}}
+\index{current\_DOWN3\_state@{current\_DOWN3\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_DOWN3\_state}{current\_DOWN3\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+DOWN3\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00015}{15}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_abb69f7c9bcc66c87c6e1575f2bef5505}\label{order__light_8h_abb69f7c9bcc66c87c6e1575f2bef5505} 
+\index{order\_light.h@{order\_light.h}!current\_OUTSIDE0\_state@{current\_OUTSIDE0\_state}}
+\index{current\_OUTSIDE0\_state@{current\_OUTSIDE0\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE0\_state}{current\_OUTSIDE0\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+OUTSIDE0\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00017}{17}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a03137945ec0b992328a5321b50e6f6ce}\label{order__light_8h_a03137945ec0b992328a5321b50e6f6ce} 
+\index{order\_light.h@{order\_light.h}!current\_OUTSIDE1\_state@{current\_OUTSIDE1\_state}}
+\index{current\_OUTSIDE1\_state@{current\_OUTSIDE1\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE1\_state}{current\_OUTSIDE1\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+OUTSIDE1\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00018}{18}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a34bc3583f68f7eb43d97c570ffc4cae4}\label{order__light_8h_a34bc3583f68f7eb43d97c570ffc4cae4} 
+\index{order\_light.h@{order\_light.h}!current\_OUTSIDE2\_state@{current\_OUTSIDE2\_state}}
+\index{current\_OUTSIDE2\_state@{current\_OUTSIDE2\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE2\_state}{current\_OUTSIDE2\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+OUTSIDE2\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00019}{19}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a859e301c0701ab954f461fedef21d9ed}\label{order__light_8h_a859e301c0701ab954f461fedef21d9ed} 
+\index{order\_light.h@{order\_light.h}!current\_OUTSIDE3\_state@{current\_OUTSIDE3\_state}}
+\index{current\_OUTSIDE3\_state@{current\_OUTSIDE3\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_OUTSIDE3\_state}{current\_OUTSIDE3\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+OUTSIDE3\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00020}{20}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a71a317b04ba46af687dd2a429b894742}\label{order__light_8h_a71a317b04ba46af687dd2a429b894742} 
+\index{order\_light.h@{order\_light.h}!current\_UP0\_state@{current\_UP0\_state}}
+\index{current\_UP0\_state@{current\_UP0\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_UP0\_state}{current\_UP0\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+UP0\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00010}{10}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_afcdd0b04d81bc7766ac38964c0ab3b4c}\label{order__light_8h_afcdd0b04d81bc7766ac38964c0ab3b4c} 
+\index{order\_light.h@{order\_light.h}!current\_UP1\_state@{current\_UP1\_state}}
+\index{current\_UP1\_state@{current\_UP1\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_UP1\_state}{current\_UP1\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+UP1\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00011}{11}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
+\Hypertarget{order__light_8h_a0cd2502b4d96261d603aa9649a23fce3}\label{order__light_8h_a0cd2502b4d96261d603aa9649a23fce3} 
+\index{order\_light.h@{order\_light.h}!current\_UP2\_state@{current\_UP2\_state}}
+\index{current\_UP2\_state@{current\_UP2\_state}!order\_light.h@{order\_light.h}}
+\doxysubsubsection{\texorpdfstring{current\_UP2\_state}{current\_UP2\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{order__light_8h_a041834856ee9d684f6062774ae509ffb}{Order\+\_\+\+Light\+\_\+\+State}} current\+\_\+\+UP2\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Instance of the orderlight state, giving the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{order__light_8c_source_l00013}{13}} of file \mbox{\hyperlink{order__light_8c_source}{order\+\_\+light.\+c}}.
+
